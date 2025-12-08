@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formations Industrie 4.0 - EvoluX</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/header.css">
+    <link rel="stylesheet" href="../assets/css/formations.css">
+    <link rel="stylesheet" href="../assets/css/footer.css">
+    <link rel="stylesheet" href="../assets/css/scroll-top.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="../index.html" class="logo">
+                <img src="../assets/images/logo-evolux.svg" alt="EvoluX Logo">
+            </a>
+            <ul class="nav-menu">
+                <li><a href="../index.html">Accueil</a></li>
+                <li class="dropdown">
+                    <a href="#">Solutions</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="../solutions/maintenance-predictive.html">Maintenance Prédictive</a></li>
+                        <li><a href="../solutions/jumeau-numerique.html">Jumeau Numérique</a></li>
+                        <li><a href="../solutions/efficacite-energetique.html">Efficacité Énergétique</a></li>
+                    </ul>
+                </li>
+                <li><a href="index.html" class="active">Formations</a></li>
+                <li><a href="../apropos/index.html">À propos</a></li>
+                <li><a href="../contact/index.html">Contact</a></li>
+            </ul>
+            <div class="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <section class="formations-hero">
+        <canvas id="particles-canvas-formations"></canvas>
+        <div class="container">
+            <h1>Formations Industrie 4.0</h1>
+            <p>
+                Développez les compétences nécessaires pour maîtriser les technologies de l'Industrie 4.0
+                avec nos formations pratiques et certifiantes.
+            </p>
+        </div>
+    </section>
+
+    <section class="formations-content">
+        <div class="container">
+            <div class="section-title">
+                <h2>Nos Formations</h2>
+                <p>6 formations complètes pour maîtriser l'Industrie 4.0</p>
+            </div>
+            <div class="grid grid-3">
+                <div class="card formation-card">
+                    <div class="formation-image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=400&q=80" alt="Industrie 4.0" class="formation-image">
+                        <div class="formation-overlay">
+                            <div class="icon">
+                                <i class="fas fa-graduation-cap"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="formation-content">
+                        <h3>Introduction à l'Industrie 4.0</h3>
+                        <p>
+                            Découvrez les concepts fondamentaux de l'Industrie 4.0, les technologies clés
+                            et les opportunités qu'elles offrent pour votre entreprise.
+                        </p>
+                    </div>
+                </div>
+                <div class="card formation-card">
+                    <div class="formation-image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&q=80" alt="IoT industriel" class="formation-image">
+                        <div class="formation-overlay">
+                            <div class="icon">
+                                <i class="fas fa-wifi"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="formation-content">
+                        <h3>IoT industriel</h3>
+                        <p>
+                            Maîtrisez l'Internet des Objets industriel : ESP32, capteurs, MQTT, OPC-UA.
+                            Apprenez à connecter et à gérer vos équipements industriels.
+                        </p>
+                    </div>
+                </div>
+                <div class="card formation-card">
+                    <div class="formation-image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1555255707-c07966088b7b?w=400&q=80" alt="Maintenance prédictive" class="formation-image">
+                        <div class="formation-overlay">
+                            <div class="icon">
+                                <i class="fas fa-brain"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="formation-content">
+                        <h3>Maintenance prédictive par IA</h3>
+                        <p>
+                            Apprenez à implémenter des solutions de maintenance prédictive utilisant
+                            l'intelligence artificielle pour anticiper les pannes.
+                        </p>
+                    </div>
+                </div>
+                <div class="card formation-card">
+                    <div class="formation-image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1635070041078-e363dbe005cb?w=400&q=80" alt="Jumeaux numériques" class="formation-image">
+                        <div class="formation-overlay">
+                            <div class="icon">
+                                <i class="fas fa-cube"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="formation-content">
+                        <h3>Supervision avancée & jumeaux numériques</h3>
+                        <p>
+                            Créez des jumeaux numériques et des systèmes de supervision 3D pour
+                            visualiser et superviser vos installations industrielles.
+                        </p>
+                    </div>
+                </div>
+                <div class="card formation-card">
+                    <div class="formation-image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&q=80" alt="Data Science" class="formation-image">
+                        <div class="formation-overlay">
+                            <div class="icon">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="formation-content">
+                        <h3>Data Science pour l'industrie</h3>
+                        <p>
+                            Exploitez vos données industrielles avec les techniques de Data Science :
+                            analyse, prédiction et optimisation.
+                        </p>
+                    </div>
+                </div>
+                <div class="card formation-card">
+                    <div class="formation-image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=400&q=80" alt="Automatisation" class="formation-image">
+                        <div class="formation-overlay">
+                            <div class="icon">
+                                <i class="fas fa-cogs"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="formation-content">
+                        <h3>Automatisation & PLC</h3>
+                        <p>
+                            Maîtrisez la programmation des automates programmables (PLC) et les
+                            systèmes d'automatisation industrielle.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="approach-section">
+                <h2>Approche pédagogique</h2>
+                <p class="approach-description">
+                    Nos formations privilégient la pratique pour une mise en application immédiate
+                </p>
+                <div class="approach-grid">
+                    <div class="approach-item">
+                        <i class="fas fa-chalkboard-teacher"></i>
+                        <h4>20% théorie</h4>
+                        <p>Concepts essentiels et fondamentaux</p>
+                    </div>
+                    <div class="approach-item">
+                        <i class="fas fa-laptop-code"></i>
+                        <h4>80% pratique</h4>
+                        <p>Exercices et projets concrets</p>
+                    </div>
+                    <div class="approach-item">
+                        <i class="fas fa-tools"></i>
+                        <h4>Plateformes réelles</h4>
+                        <p>Exercices sur plateformes réelles</p>
+                    </div>
+                    <div class="approach-item">
+                        <i class="fas fa-project-diagram"></i>
+                        <h4>Mini-projets</h4>
+                        <p>Mini-projets industriels</p>
+                    </div>
+                    <div class="approach-item">
+                        <i class="fas fa-certificate"></i>
+                        <h4>Certifications</h4>
+                        <p>Certifications remises à la fin</p>
+                    </div>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 60px;">
+                <a href="../contact/index.html" class="btn btn-primary" style="font-size: 1.2rem; padding: 18px 40px;">Demander plus d'informations</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <a href="../index.html" class="footer-logo">EvoluX</a>
+                    <p class="footer-tagline">Votre partenaire pour la transformation digitale industrielle au Maroc</p>
+                    <div class="social-icons">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Solutions</h3>
+                    <ul class="footer-links">
+                        <li><a href="../solutions/maintenance-predictive.html">Maintenance Prédictive</a></li>
+                        <li><a href="../solutions/jumeau-numerique.html">Jumeau Numérique</a></li>
+                        <li><a href="../solutions/efficacite-energetique.html">Efficacité Énergétique</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Entreprise</h3>
+                    <ul class="footer-links">
+                        <li><a href="../apropos/index.html">À Propos</a></li>
+                        <li><a href="index.html">Formations</a></li>
+                        <li><a href="../contact/index.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Contact</h3>
+                    <ul class="contact-info">
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Casablanca, Maroc</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            <span>+212 6XX XX XX XX</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <span>contact@evolux.ma</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-divider"></div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 EvoluX. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <button class="scroll-to-top" aria-label="Retour en haut">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="../assets/js/main.js"></script>
+</body>
+</html>

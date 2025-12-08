@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EvoluX - Accélérez votre transition vers l'Industrie 4.0</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/header.css">
+    <link rel="stylesheet" href="assets/css/home.css">
+    <link rel="stylesheet" href="assets/css/footer.css">
+    <link rel="stylesheet" href="assets/css/scroll-top.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html" class="logo">
+                <img src="assets/images/logo-evolux.svg" alt="EvoluX Logo">
+            </a>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="active">Accueil</a></li>
+                <li class="dropdown">
+                    <a href="#">Solutions</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="solutions/maintenance-predictive.html">Maintenance Prédictive</a></li>
+                        <li><a href="solutions/jumeau-numerique.html">Jumeau Numérique</a></li>
+                        <li><a href="solutions/efficacite-energetique.html">Efficacité Énergétique</a></li>
+                    </ul>
+                </li>
+                <li><a href="formations/index.html">Formations</a></li>
+                <li><a href="apropos/index.html">À propos</a></li>
+                <li><a href="contact/index.html">Contact</a></li>
+            </ul>
+            <div class="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <video autoplay muted loop playsinline class="hero-video">
+            <source src="assets/images/Gif.mp4" type="video/mp4">
+        </video>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1>Accélérez votre transition vers l'Industrie 4.0</h1>
+            <p class="subtitle">
+                Des solutions marocaines basées sur l'IA, l'IoT et la visualisation 3D pour optimiser vos opérations,
+                améliorer votre efficacité énergétique et réduire vos arrêts machine.
+            </p>
+            <div class="hero-buttons">
+                <a href="contact/index.html" class="btn btn-primary">Demander une Démo</a>
+                <a href="assets/pdf/brochure-evolux.pdf" class="btn btn-secondary" download>Télécharger la Brochure</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="solutions-section">
+        <canvas id="particles-canvas"></canvas>
+        <div class="container">
+            <div class="section-title">
+                <h2>Nos solutions principales</h2>
+            </div>
+            <div class="grid grid-3">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=800&q=80" alt="Maintenance Prédictive" class="flip-card-image">
+                            <div class="flip-card-overlay">
+                                <div class="icon">
+                                    <i class="fas fa-brain"></i>
+                                </div>
+                                <h3>Maintenance Prédictive par IA</h3>
+                            </div>
+                        </div>
+                        <div class="flip-card-back">
+                            <div class="icon">
+                                <i class="fas fa-brain"></i>
+                            </div>
+                            <h3>Maintenance Prédictive par IA</h3>
+                            <p>
+                                Surveillez vos machines en temps réel grâce à des capteurs de vibration, température et courant.
+                                L'IA analyse vos données, détecte les anomalies et envoie des alertes instantanées sur WhatsApp.
+                            </p>
+                            <a href="solutions/maintenance-predictive.html" class="btn btn-primary">En savoir plus</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="https://images.unsplash.com/photo-1635070041078-e363dbe005cb?w=800&q=80" alt="Jumeau Numérique" class="flip-card-image">
+                            <div class="flip-card-overlay">
+                                <div class="icon">
+                                    <i class="fas fa-cube"></i>
+                                </div>
+                                <h3>Jumeau Numérique & Supervision 3D</h3>
+                            </div>
+                        </div>
+                        <div class="flip-card-back">
+                            <div class="icon">
+                                <i class="fas fa-cube"></i>
+                            </div>
+                            <h3>Jumeau Numérique & Supervision 3D</h3>
+                            <p>
+                                Obtenez une vision immersive de votre installation industrielle. Nos modèles 3D connectés aux
+                                PLC (via OPC-UA, Modbus…) affichent votre état de production en temps réel.
+                            </p>
+                            <a href="solutions/jumeau-numerique.html" class="btn btn-primary">En savoir plus</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="https://images.unsplash.com/photo-1497435334941-8c899ee9e8e9?w=800&q=80" alt="Efficacité Énergétique" class="flip-card-image">
+                            <div class="flip-card-overlay">
+                                <div class="icon">
+                                    <i class="fas fa-bolt"></i>
+                                </div>
+                                <h3>Efficacité Énergétique Intelligente</h3>
+                            </div>
+                        </div>
+                        <div class="flip-card-back">
+                            <div class="icon">
+                                <i class="fas fa-bolt"></i>
+                            </div>
+                            <h3>Efficacité Énergétique Intelligente</h3>
+                            <p>
+                                Suivez votre consommation via des TC/TT, détectez les dérives, optimisez vos dépenses
+                                énergétiques et recevez des recommandations intelligentes basées sur l'IA.
+                            </p>
+                            <a href="solutions/efficacite-energetique.html" class="btn btn-primary">En savoir plus</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="stats-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Chiffres clés</h2>
+            </div>
+            <div class="grid grid-3">
+                <div class="stat-item">
+                    <div class="stat-number" data-target="30" data-suffix="%">0</div>
+                    <div class="stat-label">de réduction des arrêts non planifiés</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" data-target="25" data-suffix="%">0</div>
+                    <div class="stat-label">d'économie d'énergie</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" data-target="10" data-suffix="+">0</div>
+                    <div class="stat-label">ans d'expertise en Industrie 4.0</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="industries-section">
+        <canvas id="particles-canvas-industries"></canvas>
+        <div class="container">
+            <div class="section-title">
+                <h2>Industries que nous servons</h2>
+            </div>
+            <div class="grid grid-4">
+                <div class="industry-item">
+                    <i class="fas fa-seedling"></i>
+                    <h4>Agroalimentaire</h4>
+                </div>
+                <div class="industry-item">
+                    <i class="fas fa-car"></i>
+                    <h4>Automobile</h4>
+                </div>
+                <div class="industry-item">
+                    <i class="fas fa-box"></i>
+                    <h4>Plasturgie</h4>
+                </div>
+                <div class="industry-item">
+                    <i class="fas fa-tshirt"></i>
+                    <h4>Textile</h4>
+                </div>
+                <div class="industry-item">
+                    <i class="fas fa-bolt"></i>
+                    <h4>Énergie</h4>
+                </div>
+                <div class="industry-item">
+                    <i class="fas fa-flask"></i>
+                    <h4>Chimie</h4>
+                </div>
+                <div class="industry-item">
+                    <i class="fas fa-tint"></i>
+                    <h4>Traitement des eaux</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <a href="index.html" class="footer-logo">EvoluX</a>
+                    <p class="footer-tagline">Votre partenaire pour la transformation digitale industrielle au Maroc</p>
+                    <div class="social-icons">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Solutions</h3>
+                    <ul class="footer-links">
+                        <li><a href="solutions/maintenance-predictive.html">Maintenance Prédictive</a></li>
+                        <li><a href="solutions/jumeau-numerique.html">Jumeau Numérique</a></li>
+                        <li><a href="solutions/efficacite-energetique.html">Efficacité Énergétique</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Entreprise</h3>
+                    <ul class="footer-links">
+                        <li><a href="apropos/index.html">À Propos</a></li>
+                        <li><a href="formations/index.html">Formations</a></li>
+                        <li><a href="contact/index.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Contact</h3>
+                    <ul class="contact-info">
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Casablanca, Maroc</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            <span>+212 6XX XX XX XX</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <span>contact@evolux.ma</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-divider"></div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 EvoluX. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <button class="scroll-to-top" aria-label="Retour en haut">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
+

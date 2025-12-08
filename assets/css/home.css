@@ -1,0 +1,514 @@
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    padding-top: 100px;
+    overflow: hidden;
+}
+
+.hero-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+    z-index: -2;
+    filter: brightness(0.5) contrast(1.2) saturate(1.1) blur(0.5px);
+    transition: filter 0.3s ease;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(10, 14, 39, 0.75) 0%, rgba(21, 25, 50, 0.65) 50%, rgba(10, 14, 39, 0.7) 100%);
+    z-index: -1;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+        radial-gradient(circle at 30% 40%, rgba(0, 212, 255, 0.2) 0%, transparent 50%),
+        radial-gradient(circle at 70% 60%, rgba(123, 44, 191, 0.15) 0%, transparent 50%),
+        radial-gradient(circle at 50% 50%, rgba(0, 212, 255, 0.1) 0%, transparent 70%);
+    z-index: 0;
+    animation: pulse 8s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.8;
+    }
+}
+
+.hero-content {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 20px;
+    z-index: 1;
+    position: relative;
+    text-shadow: 0 2px 20px rgba(0, 0, 0, 0.5);
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+    animation: fadeInUp 1s ease;
+    color: white;
+    text-shadow: 0 4px 30px rgba(0, 0, 0, 0.8), 0 2px 10px rgba(0, 212, 255, 0.3);
+}
+
+.hero .subtitle {
+    font-size: 1.3rem;
+    color: rgba(255, 255, 255, 0.95);
+    margin-bottom: 40px;
+    line-height: 1.8;
+    animation: fadeInUp 1s ease 0.2s both;
+    text-shadow: 0 2px 15px rgba(0, 0, 0, 0.6);
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+    animation: fadeInUp 1s ease 0.4s both;
+}
+
+.solutions-section {
+    padding: 100px 0;
+    background: linear-gradient(135deg, rgba(10, 14, 39, 0.95) 0%, rgba(21, 25, 50, 0.95) 100%);
+    backdrop-filter: blur(10px);
+    position: relative;
+    overflow: hidden;
+}
+
+.solutions-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 30% 50%, rgba(0, 212, 255, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 70% 50%, rgba(123, 44, 191, 0.1) 0%, transparent 50%);
+    z-index: 0;
+}
+
+.solutions-section .container {
+    position: relative;
+    z-index: 1;
+}
+
+.solutions-section .section-title h2 {
+    color: white;
+    margin-bottom: 15px;
+    text-shadow: 0 2px 10px rgba(0, 212, 255, 0.3);
+}
+
+.solutions-section .section-title p {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+#particles-canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    opacity: 0.9;
+}
+
+.solution-card {
+    text-align: center;
+    height: 100%;
+}
+
+.solution-card .icon {
+    font-size: 4rem;
+    margin-bottom: 20px;
+    background: var(--gradient-3);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.solution-card h3 {
+    margin-bottom: 15px;
+    color: var(--text-primary);
+}
+
+.solution-card p {
+    color: var(--text-secondary);
+    line-height: 1.8;
+}
+
+/* Flip Card Styles */
+.flip-card {
+    background-color: transparent;
+    width: 100%;
+    height: 400px;
+    perspective: 1000px;
+    margin-bottom: 30px;
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.flip-card-front {
+    background: var(--dark-card);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.flip-card-back {
+    background: var(--dark-card);
+    border: 1px solid rgba(0, 212, 255, 0.3);
+    transform: rotateY(180deg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 30px;
+}
+
+.flip-card-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.flip-card-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(10, 14, 39, 0.7) 0%, rgba(10, 14, 39, 0.9) 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    text-align: center;
+}
+
+.flip-card-overlay .icon {
+    font-size: 4rem;
+    margin-bottom: 20px;
+    color: var(--primary-color);
+}
+
+.flip-card-overlay h3 {
+    color: white;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.flip-card-back .icon {
+    font-size: 3rem;
+    margin-bottom: 15px;
+    color: var(--primary-color);
+}
+
+.flip-card-back h3 {
+    color: var(--text-primary);
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+}
+
+.flip-card-back p {
+    color: var(--text-secondary);
+    line-height: 1.8;
+    margin-bottom: 20px;
+    font-size: 0.95rem;
+}
+
+@media (max-width: 768px) {
+    .flip-card {
+        height: 350px;
+    }
+}
+
+.stats-section {
+    padding: 100px 0;
+    background: rgba(0, 212, 255, 0.05);
+}
+
+.stat-item {
+    text-align: center;
+}
+
+.stat-number {
+    font-size: 4rem;
+    font-weight: 700;
+    background: var(--gradient-3);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 10px;
+}
+
+.stat-label {
+    font-size: 1.2rem;
+    color: var(--text-secondary);
+}
+
+.industries-section {
+    padding: 100px 0;
+    background: linear-gradient(135deg, rgba(10, 14, 39, 0.95) 0%, rgba(21, 25, 50, 0.95) 100%);
+    backdrop-filter: blur(10px);
+    position: relative;
+    overflow: hidden;
+}
+
+.industries-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 30% 50%, rgba(0, 212, 255, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 70% 50%, rgba(123, 44, 191, 0.1) 0%, transparent 50%);
+    z-index: 0;
+}
+
+.industries-section .container {
+    position: relative;
+    z-index: 1;
+}
+
+.industries-section .section-title h2 {
+    color: white;
+    margin-bottom: 15px;
+    text-shadow: 0 2px 10px rgba(0, 212, 255, 0.3);
+}
+
+.industries-section .section-title p {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+#particles-canvas-industries {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    opacity: 0.9;
+}
+
+.industry-item {
+    text-align: center;
+    padding: 30px;
+    border-radius: 15px;
+    background: var(--dark-card);
+    transition: all 0.3s ease;
+}
+
+.industry-item:hover {
+    transform: translateY(-5px);
+    background: rgba(0, 212, 255, 0.1);
+}
+
+.industry-item i {
+    font-size: 3rem;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+.industry-item h4 {
+    color: var(--text-primary);
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 968px) {
+    .hero h1 {
+        font-size: 3rem;
+    }
+    
+    .hero .subtitle {
+        font-size: 1.2rem;
+    }
+    
+    .hero-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .hero-buttons .btn {
+        width: 100%;
+        max-width: 300px;
+    }
+    
+    .solutions-section,
+    .industries-section {
+        padding: 80px 0;
+    }
+    
+    .stat-number {
+        font-size: 3.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero {
+        min-height: 80vh;
+        padding-top: 80px;
+    }
+    
+    .hero-video {
+        filter: brightness(0.45) contrast(1.2) saturate(1.1) blur(0.5px);
+    }
+    
+    .hero-overlay {
+        background: linear-gradient(135deg, rgba(10, 14, 39, 0.8) 0%, rgba(21, 25, 50, 0.7) 100%);
+    }
+    
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+    
+    .hero .subtitle {
+        font-size: 1.1rem;
+        padding: 0 10px;
+    }
+    
+    .hero-buttons {
+        gap: 15px;
+        padding: 0 20px;
+    }
+    
+    .solutions-section,
+    .industries-section {
+        padding: 60px 0;
+    }
+    
+    .flip-card {
+        height: 350px;
+        margin-bottom: 20px;
+    }
+    
+    .stat-number {
+        font-size: 3rem;
+    }
+    
+    .stat-label {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        min-height: 70vh;
+        padding-top: 60px;
+    }
+    
+    .hero-video {
+        filter: brightness(0.4) contrast(1.2) saturate(1.1) blur(0.5px);
+    }
+    
+    .hero-overlay {
+        background: linear-gradient(135deg, rgba(10, 14, 39, 0.85) 0%, rgba(21, 25, 50, 0.75) 100%);
+    }
+    
+    .hero h1 {
+        font-size: 2rem;
+    }
+    
+    .hero .subtitle {
+        font-size: 1rem;
+    }
+    
+    .hero-buttons .btn {
+        width: 100%;
+        font-size: 0.9rem;
+        padding: 12px 20px;
+    }
+    
+    .solutions-section,
+    .industries-section {
+        padding: 50px 0;
+    }
+    
+    .flip-card {
+        height: 300px;
+    }
+    
+    .flip-card-overlay,
+    .flip-card-back {
+        padding: 20px;
+    }
+    
+    .flip-card-overlay .icon,
+    .flip-card-back .icon {
+        font-size: 3rem;
+    }
+    
+    .flip-card-overlay h3,
+    .flip-card-back h3 {
+        font-size: 1.2rem;
+    }
+    
+    .stat-number {
+        font-size: 2.5rem;
+    }
+    
+    .industry-item {
+        padding: 20px;
+    }
+    
+    .industry-item i {
+        font-size: 2.5rem;
+    }
+}
+
